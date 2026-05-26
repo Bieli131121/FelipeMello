@@ -69,6 +69,7 @@
   padding: 2.5rem 2rem;
   text-align: center;
   box-shadow: var(--shadow-lg);
+  overflow: hidden;
 }
 
 .sobreCard h3 {
@@ -160,13 +161,13 @@ a.contatoVal:hover { color: var(--gold); }
 
 /* Foto Felipe */
 .fotoFelipe {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
+  width: calc(100% + 4rem);
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: top;
-  border: 3px solid rgba(200, 151, 58, 0.6);
-  margin-bottom: 1rem;
+  object-position: top center;
+  display: block;
+  margin: -2.5rem -2rem 1.5rem -2rem;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 /* Diferenciais badges */
