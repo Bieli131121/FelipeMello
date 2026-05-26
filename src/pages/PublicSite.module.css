@@ -157,3 +157,176 @@ a.contatoVal:hover { color: var(--gold); }
   .sobreCard { max-width: 380px; }
   .contatoGrid { grid-template-columns: 1fr; max-width: 480px; }
 }
+
+/* Foto Felipe */
+.fotoFelipe {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid rgba(200, 151, 58, 0.6);
+  margin-bottom: 1rem;
+}
+
+/* Diferenciais badges */
+.sobreDiferenciais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.badge {
+  background: rgba(200, 151, 58, 0.12);
+  color: var(--gold);
+  border: 1px solid rgba(200, 151, 58, 0.35);
+  border-radius: 20px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Serviços */
+.servicos {
+  padding: 80px 2rem;
+  background: white;
+}
+
+.servicosContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.servicosTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--ocean);
+}
+
+.servicosTitle em { color: var(--gold); font-style: normal; }
+
+.servicosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.servicoCard {
+  background: var(--sand);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.servicoCard:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+
+.servicoIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.servicoCard h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ocean);
+  margin-bottom: 0.5rem;
+}
+
+.servicoCard p {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+/* MVV */
+.mvv {
+  padding: 60px 2rem;
+  background: var(--ocean);
+}
+
+.mvvGrid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.mvvCard {
+  text-align: center;
+  color: white;
+  padding: 1.5rem;
+}
+
+.mvvIcon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.mvvCard h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--gold);
+}
+
+.mvvCard p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+/* Contato social */
+.contatoTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--ocean);
+}
+
+.contatoTitle em { color: var(--gold); font-style: normal; }
+
+.contatoSocial {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.socialBtn {
+  background: var(--sand);
+  border: 1px solid var(--border);
+  color: var(--ocean);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.socialBtn:hover {
+  background: var(--ocean);
+  color: white;
+  border-color: var(--ocean);
+}
+
+@media (max-width: 900px) {
+  .servicosGrid { grid-template-columns: 1fr 1fr; }
+  .mvvGrid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .contatoSocial { flex-direction: column; align-items: center; }
+}
+
+@media (max-width: 600px) {
+  .servicosGrid { grid-template-columns: 1fr; }
+}
