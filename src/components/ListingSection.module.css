@@ -1,0 +1,81 @@
+.section {
+  padding: 80px 2rem;
+  background: white;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--ocean);
+  line-height: 1.15;
+}
+
+.header h2 em { color: var(--gold); font-style: normal; }
+
+.sub {
+  color: var(--text-soft);
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Filter bar */
+.filterBar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+}
+
+.filterBtn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s;
+  color: var(--text-soft);
+}
+
+.filterBtn:hover,
+.filterBtn.active {
+  background: var(--ocean);
+  border-color: var(--ocean);
+  color: white;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+
+/* Section tag */
+:global(.section-tag) {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+:global(.container) {
+  max-width: 1280px;
+  margin: 0 auto;
+}

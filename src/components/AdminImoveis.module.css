@@ -1,0 +1,154 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.header h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--ocean); font-weight: 700; }
+.header p  { font-size: 0.83rem; color: var(--text-soft); margin-top: 2px; }
+
+.filterRow {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.filterRow input,
+.filterRow select {
+  padding: 0.55rem 0.9rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  background: white;
+  color: var(--text);
+  transition: border 0.2s;
+}
+
+.filterRow input:focus,
+.filterRow select:focus { border-color: var(--ocean); }
+.filterRow input { min-width: 260px; }
+
+.viewToggle { display: flex; gap: 4px; }
+
+.viewBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  border: 1.5px solid var(--border);
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--text-soft);
+  transition: all 0.2s;
+}
+
+.viewBtn.active { background: var(--ocean); border-color: var(--ocean); color: white; }
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+/* CARD */
+.imCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.25s;
+  box-shadow: 0 2px 8px rgba(42, 26, 14, 0.05);
+}
+.imCard:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+
+.imThumb {
+  height: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  overflow: hidden;
+  background: var(--sand-dark);
+}
+.imThumb img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.imThumbOverlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(42, 26, 14, 0.5) 0%, transparent 50%); }
+.imBadges { position: absolute; top: 10px; left: 10px; display: flex; gap: 5px; z-index: 2; }
+
+.imBody { padding: 1rem 1.1rem; }
+.imTipo  { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); font-weight: 700; margin-bottom: 0.25rem; }
+.imTitle { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--ocean); font-weight: 600; line-height: 1.3; margin-bottom: 0.3rem; }
+.imLoc   { font-size: 0.78rem; color: var(--text-soft); margin-bottom: 0.75rem; }
+
+.imFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.imPreco { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--ocean); margin-bottom: 4px; }
+
+/* TABLE */
+.tableWrap {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.tbl { width: 100%; border-collapse: collapse; }
+.tbl th {
+  text-align: left;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-soft);
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--border);
+  background: var(--sand);
+  white-space: nowrap;
+}
+.tbl td { padding: 0.9rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.86rem; vertical-align: middle; }
+.tbl tr:last-child td { border-bottom: none; }
+.tbl tr:hover td { background: #faf8f5; }
+
+.tblThumb {
+  width: 48px; height: 36px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: var(--sand-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.tblThumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.statusSelect {
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  background: white;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .filterRow input { min-width: 100%; }
+}

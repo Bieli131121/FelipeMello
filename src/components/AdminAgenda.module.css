@@ -1,0 +1,39 @@
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+.header h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--ocean); font-weight: 700; }
+.header p  { font-size: 0.83rem; color: var(--text-soft); margin-top: 2px; }
+
+.sectionTitle { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--ocean); margin-bottom: 1rem; font-weight: 700; }
+
+.visitasList { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(42, 26, 14, 0.04);
+  transition: box-shadow 0.2s;
+}
+.card:hover { box-shadow: var(--shadow); }
+.cardPast { opacity: 0.55; }
+
+.cardDate {
+  background: var(--ocean);
+  color: white;
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  text-align: center;
+  flex-shrink: 0;
+  min-width: 52px;
+}
+.cardDay   { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; line-height: 1; display: block; }
+.cardMonth { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; display: block; }
+
+.cardBody { flex: 1; }
+.cardBody strong { font-size: 0.95rem; color: var(--ocean); display: block; }
+.cardImovel { font-size: 0.8rem; color: var(--text-soft); margin-top: 3px; }
+.cardHora   { font-size: 0.8rem; color: var(--text-soft); margin-top: 2px; }
+.cardObs    { font-size: 0.78rem; color: var(--text-soft); margin-top: 4px; font-style: italic; }

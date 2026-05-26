@@ -1,0 +1,80 @@
+.sidebar {
+  background: var(--ocean);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.logo {
+  padding: 1.5rem 1.25rem 1rem;
+  border-bottom: 1px solid rgba(200, 151, 58, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoText { line-height: 1.2; }
+.logoText strong { display: block; font-family: 'Playfair Display', serif; color: white; font-size: 0.95rem; }
+.logoText span { font-size: 0.65rem; color: rgba(255, 255, 255, 0.45); letter-spacing: 1.5px; text-transform: uppercase; }
+
+.section {
+  padding: 1.25rem 1rem 0.5rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 700;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.65rem 1rem;
+  margin: 0 0.5rem 0.15rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.navItem:hover { background: rgba(255, 255, 255, 0.08); color: white; }
+.navItem.active { background: var(--gold); color: var(--ocean); font-weight: 700; }
+
+.icon { font-size: 1rem; width: 20px; text-align: center; flex-shrink: 0; }
+
+.badge {
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 0.65rem;
+  padding: 2px 7px;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.navItem.active .badge { background: rgba(42, 26, 14, 0.2); color: var(--ocean); }
+
+.footer {
+  margin-top: auto;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer a:hover { color: var(--gold); }

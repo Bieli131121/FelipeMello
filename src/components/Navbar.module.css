@@ -1,0 +1,115 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(26, 14, 6, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200, 151, 58, 0.35);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logoIcon { font-size: 1.5rem; }
+
+.gold { color: var(--gold); }
+
+.logoBadge {
+  font-size: 0.62rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1;
+}
+
+.links {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.links a:hover { background: rgba(255, 255, 255, 0.1); color: var(--gold); }
+
+.ctaBtn {
+  background: var(--gold);
+  color: var(--ocean);
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.ctaBtn:hover { background: var(--gold-light); }
+
+.crmBtn {
+  background: rgba(200, 151, 58, 0.15);
+  color: var(--gold);
+  border: 1px solid rgba(200, 151, 58, 0.4);
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.crmBtn:hover { background: rgba(200, 151, 58, 0.25); }
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0; right: 0;
+    background: rgba(26, 14, 6, 0.98);
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(200, 151, 58, 0.2);
+    align-items: stretch;
+  }
+
+  .links.open { display: flex; }
+
+  .links a, .ctaBtn, .crmBtn { width: 100%; text-align: center; }
+}
