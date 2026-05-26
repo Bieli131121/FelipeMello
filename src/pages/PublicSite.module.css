@@ -10,8 +10,8 @@
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 4rem;
+  grid-template-columns: 480px 1fr;
+  gap: 5rem;
   align-items: center;
 }
 
@@ -63,23 +63,16 @@
 }
 
 .sobreCard {
-  background: var(--ocean);
-  color: white;
   border-radius: var(--radius-lg);
-  padding: 2.5rem 2rem;
-  text-align: center;
-  box-shadow: var(--shadow-lg);
   overflow: hidden;
+  box-shadow: var(--shadow-lg);
 }
 
-.sobreCard h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
+.sobreCard h3,
+.sobreCard > p,
+.sobreCard > a {
+  display: none;
 }
-
-.sobreCard p { font-size: 0.9rem; opacity: 0.7; }
 
 /* Contato */
 .contato {
@@ -155,19 +148,18 @@ a.contatoVal:hover { color: var(--gold); }
 
 @media (max-width: 900px) {
   .sobreContainer { grid-template-columns: 1fr; gap: 2.5rem; }
-  .sobreCard { max-width: 380px; }
+  .fotoFelipe { aspect-ratio: 4 / 3; }
   .contatoGrid { grid-template-columns: 1fr; max-width: 480px; }
 }
 
 /* Foto Felipe */
 .fotoFelipe {
-  width: calc(100% + 4rem);
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: top center;
   display: block;
-  margin: -2.5rem -2rem 1.5rem -2rem;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  border-radius: var(--radius-lg);
 }
 
 /* Diferenciais badges */

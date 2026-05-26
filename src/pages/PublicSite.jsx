@@ -35,6 +35,9 @@ export default function PublicSite({ imoveis, onAdmClick, toast }) {
       {/* Sobre */}
       <section id="sobre" className={styles.sobre}>
         <div className={styles.sobreContainer}>
+          <div className={styles.sobreCard}>
+            <img src={FOTO_FELIPE} alt="Felipe Mello" className={styles.fotoFelipe} />
+          </div>
           <div className={styles.sobreContent}>
             <span className={styles.tag}>Quem somos</span>
             <h2>Experiência e <em>dedicação</em> no mercado imobiliário</h2>
@@ -61,18 +64,12 @@ export default function PublicSite({ imoveis, onAdmClick, toast }) {
                 <span key={d} className={styles.badge}>✓ {d}</span>
               ))}
             </div>
-          </div>
-          <div className={styles.sobreCard}>
-            <img src={FOTO_FELIPE} alt="Felipe Mello" className={styles.fotoFelipe} />
-            <h3>Felipe Mello</h3>
-            <p>Corretor de Imóveis</p>
-            <p style={{ fontSize: '0.82rem', marginTop: '0.4rem', opacity: 0.75 }}>CRECI-SC 16671 · CNAI 009132</p>
             <a
               href="https://wa.me/5548991651257"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-gold"
-              style={{ marginTop: '1.25rem', width: '100%', justifyContent: 'center' }}
+              style={{ marginTop: '2rem', display: 'inline-flex' }}
             >
               💬 Fale Comigo
             </a>
