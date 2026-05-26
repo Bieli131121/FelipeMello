@@ -5,7 +5,7 @@ import Modal from '../components/Modal'
 import { useState } from 'react'
 import styles from './PublicSite.module.css'
 
-const FOTO_FELIPE =  + foto_b64 + 
+const FOTO_FELIPE = '/felipe.jpg' // Coloque a foto em public/felipe.jpg
 
 export default function PublicSite({ imoveis, onAdmClick, toast }) {
   const [contactModal, setContactModal] = useState(null)
