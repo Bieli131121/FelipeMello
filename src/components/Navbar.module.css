@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  height: 90px;
 }
 
 .logo {
@@ -100,7 +100,7 @@
   .links {
     display: none;
     position: absolute;
-    top: 68px;
+    top: 90px;
     left: 0; right: 0;
     background: rgba(26, 14, 6, 0.98);
     flex-direction: column;
@@ -121,7 +121,7 @@
 }
 
 .logoImg {
-  height: 52px;
+  height: 78px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
